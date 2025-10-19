@@ -44,3 +44,9 @@ git checkout feature/data-loader
 
 # Ejecutar
 python scripts/data_loader.py
+pip install openpyxl
+pip install xlrd
+
+# Añade todo los archivos y carpetas
+git add .
+git commit -m "feat: Agregar script inicial de carga de datos"
