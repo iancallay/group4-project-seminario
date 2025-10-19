@@ -1,6 +1,6 @@
 # group4-project-seminario
 
-**Integrantes**
+## Integrantes
 
 - Ivan Ancallay
 - Francis Fiallos
