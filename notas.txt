@@ -44,3 +44,7 @@ git checkout feature/data-loader
 
 # Ejecutar
 python scripts/data_loader.py
+
+# Instalar librerias pendientes
+pip install xlrd
+pip install openpyxl

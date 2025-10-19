@@ -19,8 +19,8 @@ def cargar_datos(path):
         return df
     except FileNotFoundError:
         print(f"Error: El archivo en la ruta {path} no fue encontrado.")
-        print("Asegurate de tener el arvchivo en la carpeta 'data'.")
-        print("También puedes verifica que la ruta sea la correcta.")  
+        print("Asegurate de tener el archivo en la carpeta 'data'.")
+        print("También puedes verificar que la ruta sea la correcta.")  
         return None
     except Exception as e:
         print(f"Error al cargar los datos: {e}")
@@ -35,4 +35,3 @@ if __name__ == "__main__":
         print(dataframe_matriz.head())
         print("\nInformación del DataFrame:")
         dataframe_matriz.info()
-# %%
