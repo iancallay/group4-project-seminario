@@ -1,0 +1,46 @@
+# Crear entorno virtual ejecutar
+python -m venv venv
+.\venv\Scripts\activate
+
+# Instalar librerias
+pip install pandas
+pip install missingno
+pip freeze > requirements.txt
+
+# Desactivar entorno virtual
+deactive
+
+# Subir un nivel
+cd..
+
+
+# Git
+git clone url
+git config --global user.email "ivan.ancallay@gmail.com"
+git config --global user.name "Ivan Orlando Ancallay Rea"
+
+# Crear un branch
+git checkout -b ivan-ancallay/readme-plan-proyecto
+git add archivo_nombre
+git commit -m "mensaje del commit"
+git push origin ivan-ancallay/readme-plan-proyecto
+
+# Regresar al main
+git checkout main
+
+# Actualizar repositorio
+git pull origin main
+
+# Si aparece mensaje
+PS C:\Users\ivana\Documents\group4-project-seminario> & C:\Users\ivana\Documents\group4-project-seminario\venv\Scripts\Activate.ps1
+Solo enviar deactivate
+
+Crear 2 carpetas
+mkdir data
+mkdir scripts
+
+# Crear nueva rama
+git checkout feature/data-loader
+
+# Ejecutar
+python scripts/data_loader.py
