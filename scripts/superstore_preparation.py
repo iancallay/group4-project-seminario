@@ -45,9 +45,9 @@ def preparar_datos_para_analisis(df):
     df_modelo = df[columnas_existentes].copy()
 
     # 🔹 Convertir fechas al tipo datetime (por si vienen como texto)
-    if "Order Date" in df_modelo.columns:
-        df_modelo["Order Date"] = pd.to_datetime(
-            df_modelo["Order Date"], errors="coerce")
+    if "Order_Date" in df_modelo.columns:
+        df_modelo["Order_Date"] = pd.to_datetime(
+            df_modelo["Order_Date"], errors="coerce")
 
     # 🔹 Eliminar filas con fechas o ventas nulas (no sirven para pronóstico)
     df_modelo = df_modelo.dropna(subset=["Order_Date", "Sales"])
