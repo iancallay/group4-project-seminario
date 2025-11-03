@@ -19,6 +19,11 @@ def preparar_datos_para_analisis(df):
     # Columnas relevantes para análisis de ventas y pronóstico
     columnas_utiles = [
         "Order_Date",
+        "Cod_Anio",
+        "Cod_Mes",
+        "Cod_Dia",
+        "Nom_Mes",
+        "Nom_Dia",
         "Category",
         "Sub_Category",
         "Region",
