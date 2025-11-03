@@ -10,7 +10,8 @@ from scripts.superstore_clean import (
     convertir_a_mayusculas,
     ordenar_y_formatear_fecha,
     renombrar_columnas,
-    verificar_nulos
+    verificar_nulos,
+    agregar_columnas_fecha
 )
 
 from scripts.superstore_saving import guardar_datos_limpios
@@ -74,13 +75,12 @@ if __name__ == "__main__":
     # Ordenar y formatear la columna de fecha 'Order_Date'
     df_superstore_order_date = ordenar_y_formatear_fecha(df_superstore_upper, 'Order_Date')
     
-    # Ordenar y formatear la columna de fecha 'Ship_Date'
-    df_superstore_ship_date = ordenar_y_formatear_fecha(df_superstore_order_date, 'Ship_Date')
+    df_agregar_columnas = agregar_columnas_fecha(df_superstore_order_date, columna_fecha="Order_Date")
+
     
-    print(df_superstore_ship_date.head(5))
-    
-    df_final = preparar_datos_para_analisis(df_superstore_ship_date)
+    df_final = preparar_datos_para_analisis(df_agregar_columnas)
     print(df_final.columns)
+    
     
     df_grouped = agrupar_ventas(df_final, nivel="mensual", por=["Region", "Category"])
     print(df_grouped.head(5))

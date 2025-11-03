@@ -1,7 +1,8 @@
 import pandas as pd
-
+import locale
 
 # TODO Función para verificar valores nulos en el DataFrame
+
 
 def verificar_nulos(df):
     """
@@ -91,7 +92,8 @@ def ordenar_y_formatear_fecha(df, columna_fecha):
     df = df.copy()
 
     # Verificar que la columna exista
-    print(f"Verificando si la columna '{columna_fecha}' existe en el DataFrame.")
+    print(
+        f"Verificando si la columna '{columna_fecha}' existe en el DataFrame.")
     if columna_fecha not in df.columns:
         raise ValueError(
             f"La columna '{columna_fecha}' no existe en el DataFrame.")
@@ -109,3 +111,49 @@ def ordenar_y_formatear_fecha(df, columna_fecha):
     print(f"Columna '{columna_fecha}' ordenada y formateada correctamente.")
 
     return df.reset_index(drop=True)
+
+
+def agregar_columnas_fecha(df, columna_fecha):
+    """
+    Agrega columnas de año, mes, nombre del mes, día y nombre del día
+    basadas en una columna de fecha existente.
+
+    Parámetros:
+    df (pd.DataFrame): DataFrame con la columna de fecha.
+    columna_fecha (str): Nombre de la columna de fecha.
+
+    Retorna:
+    pd.DataFrame con las nuevas columnas agregadas.
+    """
+    df = df.copy()
+
+    # Verificar que la columna exista
+    if columna_fecha not in df.columns:
+        raise ValueError(
+            f"La columna '{columna_fecha}' no existe en el DataFrame.")
+
+    # Convertir a tipo datetime
+    df[columna_fecha] = pd.to_datetime(
+        df[columna_fecha], errors='coerce', dayfirst=True)
+
+    # Configurar idioma español (puede variar según el sistema operativo)
+    try:
+        locale.setlocale(locale.LC_TIME, 'es_ES.UTF-8')
+    except:
+        locale.setlocale(locale.LC_TIME, 'es_ES')
+
+    # Crear nuevas columnas
+    df['Cod_Anio'] = df[columna_fecha].dt.year.astype(
+        'Int64')  # entero nulo-seguro
+    df['Cod_Mes'] = df[columna_fecha].dt.month.astype('Int64')
+    df['Nom_Mes'] = df[columna_fecha].dt.strftime(
+        '%B').str.capitalize().astype('string')
+    df['Cod_Dia'] = df[columna_fecha].dt.day.astype('Int64')
+    df['Nom_Dia'] = df[columna_fecha].dt.strftime(
+        '%A').str.capitalize().astype('string')
+
+    print(
+        f"Se agregaron las columnas: Año, Mes, Nombre_mes, Día, Nombre_día basadas en '{columna_fecha}'.")
+    print(df[[columna_fecha, 'Cod_Anio', 'Cod_Mes', 'Nom_Mes', 'Cod_Dia', 'Nom_Dia']].head())
+
+    return df
