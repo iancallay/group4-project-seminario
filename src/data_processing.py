@@ -93,63 +93,25 @@ def kpis(df, category="All Categories", region="All Regions", year="All years"):
 
 def create_features_for_ml(ts_data):
     """
-    Crea features tabulares a partir de una serie mensual (index de fechas):
+    Crea features tabulares a partir de una serie mensual:
       - month, quarter, year
       - lag_12
     Devuelve X (features) e y (target).
     """
-    import pandas as pd
-
     df = pd.DataFrame(ts_data.copy())
     df.columns = ['Sales']
 
-    # Fuerza el índice a DatetimeIndex de forma universal (sin hasattr/PeriodIndex)
-    idx = pd.DatetimeIndex(pd.to_datetime(df.index))
-
-    # Features de calendario
-    df['month'] = idx.month
-    df['quarter'] = idx.quarter
-    df['year'] = idx.year
+    # Features calendario
+    df['month'] = df.index.month
+    df['quarter'] = df.index.quarter
+    df['year'] = df.index.year
 
     # Rezago de 12 meses
     df['lag_12'] = df['Sales'].shift(12)
 
-    # Completa NaN iniciales del lag
+    # Completar NaN del lag de los primeros 12 puntos
     df = df.bfill()
 
-    X = df[['month', 'quarter', 'year', 'lag_12']].copy()
-    y = df['Sales']
-    return X, y
-
-    """
-    Crea features tabulares a partir de una serie mensual (index de fechas):
-      - month, quarter, year
-      - lag_12
-    Devuelve X (features) e y (target).
-    """
-    import pandas as pd
-
-    df = pd.DataFrame(ts_data.copy())
-    df.columns = ['Sales']
-
-    # Asegura índice de fechas para evitar warnings de Pylance
-    # (si fuera PeriodIndex, conviértelo a Timestamp)
-    if hasattr(df.index, "to_timestamp"):
-        idx = pd.DatetimeIndex(df.index.to_timestamp())
-    else:
-        idx = pd.DatetimeIndex(pd.to_datetime(df.index))
-
-    # Features de calendario
-    df['month'] = idx.month
-    df['quarter'] = idx.quarter
-    df['year'] = idx.year
-
-    # Rezago de 12 meses
-    df['lag_12'] = df['Sales'].shift(12)
-
-    # Completa NaN iniciales del lag
-    df = df.bfill()
-
-    X = df[['month', 'quarter', 'year', 'lag_12']].copy()
+    X = df.drop(columns=['Sales'])
     y = df['Sales']
     return X, y
