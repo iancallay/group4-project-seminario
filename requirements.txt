@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 contourpy==1.3.3
 cycler==0.12.1
 et_xmlfile==2.0.0
@@ -5,11 +6,13 @@ fonttools==4.60.1
 kiwisolver==1.4.9
 matplotlib==3.10.7
 missingno==0.5.2
+narwhals==2.10.1
 numpy==2.3.4
 openpyxl==3.1.5
 packaging==25.0
 pandas==2.3.3
 pillow==12.0.0
+plotly==6.3.1
 pyparsing==3.2.5
 python-dateutil==2.9.0.post0
 pytz==2025.2
@@ -18,3 +21,26 @@ seaborn==0.13.2
 six==1.17.0
 tzdata==2025.2
 xlrd==2.0.2
+=======
+# --- Backend API ---
+
+fastapi
+uvicorn[standard]
+pydantic
+
+# --- Frontend Dashboard ---
+
+streamlit
+requests
+
+# --- Data Science & Modeling ---
+
+pandas
+statsmodels
+matplotlib
+
+# --- Excel File Support ---
+
+openpyxl
+xlrd
+>>>>>>> a4c6005 (Versión estable FastAPI v2.3)
