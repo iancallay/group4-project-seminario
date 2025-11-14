@@ -63,14 +63,7 @@ Jupyter Notebook (para el Análisis Exploratorio)
 
 Soporte de Archivos: openpyxl, xlrd
 
-### Cómo Ejecutar el Proyecto
-
-Para ejecutar esta aplicación, se puede realizar de dos formas
-
-## Método 1
-Abrir dos terminales simultáneamente: 
- - Una para el Backend (API) 
- - Otra para el Frontend (Dashboard).
+# Cómo Ejecutar el Proyecto
 
 ## 1. Configuración Inicial (Solo la primera vez)
 
@@ -90,6 +83,8 @@ Abrir dos terminales simultáneamente:
 
 ## 2. Ejecución (Cada vez que inicies)
 
+# Método 1
+
 Iniciar el Backend (API):
 Terminal 1: Iniciar el Backend (API)
     Abre una terminal en la raíz del proyecto.
@@ -99,11 +94,12 @@ Terminal 1: Iniciar el Backend (API)
 
 Espera a ver el mensaje: Uvicorn running on http://127.0.0.1:8000
 
+Iniciar el Dashboard
 Terminal 2: Iniciar el Frontend (Dashboard)
     Activa el entorno: .\venv\Scripts\Activate
     Inicia el servidor de Streamlit:
     streamlit run app.py
 
-### Método 2
+# Método 2
 Crear un archivo llamado run_app.py el mismo que contendra los comandos para ejecutar tanto elbackend como el forntend
 python run_app.py
