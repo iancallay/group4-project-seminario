@@ -2,9 +2,9 @@
 > # group4-project-seminario
 >
 
-[![Visitar Streamlit](https://img.shields.io/badge/Visitar%20Aplicaci%C3%B3n-Google%20Cloud-blue?style=for-the-badge)](https://retail-streamlit-388244465152.us-central1.run.app)
+[![Visitar Streamlit](https://img.shields.io/badge/Visitar%20Streamlit-Google%20Cloud-blue?style=for-the-badge)](https://retail-streamlit-388244465152.us-central1.run.app)
 
-[![Visitar FastApi](https://img.shields.io/badge/Visitar%20Aplicaci%C3%B3n-Google%20Cloud-blue?style=for-the-badge)](https://retail-fastapi-388244465152.us-central1.run.app/docs)
+[![Visitar FastApi](https://img.shields.io/badge/Visitar%20FastApi-Google%20Cloud-blue?style=for-the-badge)](https://retail-fastapi-388244465152.us-central1.run.app/docs)
 
 ## Integrantes
 
