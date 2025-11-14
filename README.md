@@ -93,6 +93,8 @@ Terminal 1: Iniciar el Backend (API)\
     Inicia el servidor Uvicorn:\ 
         uvicorn api_service:app --reload\
 
+![fastapi][./imagen/fastapi.png]
+
 Espera a ver el mensaje: Uvicorn running on http://127.0.0.1:8000\
 
 Iniciar el Dashboard\
@@ -102,9 +104,5 @@ Terminal 2: Iniciar el Frontend (Dashboard)\
     streamlit run app.py\
 
 # Método 2
-Crear un archivo llamado run_app.py el mismo que contendra los comandos para ejecutar tanto elbackend como el forntend\
+Crear un archivo llamado run_app.py el mismo que contendra los comandos para ejecutar tanto el backend como el forntend\
 python run_app.py
-
-> [!IMPORTANT]
-> Link to:
-<button><a href:"_target_blank">Link</a></button>
