@@ -98,7 +98,7 @@ Terminal 1: Iniciar el Backend (API)\
     Inicia el servidor Uvicorn:\ 
         uvicorn api_service:app --reload\
 
-![fastapi](./imagen/fastapi.png)\
+![fastapi](./imagen/fastapi.png)
 
 Espera a ver el mensaje: Uvicorn running on http://127.0.0.1:8000\
 
@@ -108,13 +108,13 @@ Terminal 2: Iniciar el Frontend (Dashboard)\
     Inicia el servidor de Streamlit:\
     streamlit run app.py\
 
-Página principal de Streamlit\
+<br>Página principal de Streamlit
 ![streamlit_main](./imagen/sreamlit.png)
-Modelo Sarima\
+<br>Modelo Sarima
 ![streamlit_main](./imagen/sarima.png)
-Modelo XGBoost\
+<br>Modelo XGBoost
 ![streamlit_main](./imagen/xgboost.png)
-KPI's Comparativos\
+<br>KPI's Comparativos
 ![streamlit_main](./imagen/kpis.png)
 
 # Método 2
