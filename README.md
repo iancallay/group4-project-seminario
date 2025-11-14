@@ -103,3 +103,6 @@ Terminal 2: Iniciar el Frontend (Dashboard)
 # Método 2
 Crear un archivo llamado run_app.py el mismo que contendra los comandos para ejecutar tanto elbackend como el forntend
 python run_app.py
+
+> [!IMPORTANT]
+> <button><a href:"_target_blank">Link</a></button>
