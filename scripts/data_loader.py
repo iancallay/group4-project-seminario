@@ -6,7 +6,7 @@ import os
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # TODO ruta absoluta de la carpeta data (../data)
-DATA_PATH = os.path.join(SCRIPT_DIR, '..', 'data', "US_Superstore_data.xls")
+DATA_PATH = os.path.join(SCRIPT_DIR, '..', 'data', "US Superstore data.xls")
 
 # TODO crear la funcion load_data
 def cargar_datos_excel(path):

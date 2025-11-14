@@ -41,9 +41,9 @@ El proyecto está organizado en una estructura modular de 3 capas para una clara
 
 
 
-Tecnologías Utilizadas
+### Tecnologías Utilizadas
 
-Python 3.11+
+Python 3.14
 
 Backend (API): FastAPI, Uvicorn
 
@@ -63,54 +63,47 @@ Jupyter Notebook (para el Análisis Exploratorio)
 
 Soporte de Archivos: openpyxl, xlrd
 
-Cómo Ejecutar el Proyecto
+### Cómo Ejecutar el Proyecto
 
-Para ejecutar esta aplicación, necesitarás tener dos terminales abiertas simultáneamente: una para el Backend (API) y otra para el Frontend (Dashboard).
+Para ejecutar esta aplicación, se puede realizar de dos formas
 
-1. Configuración Inicial (Solo la primera vez)
+## Método 1
+Abrir dos terminales simultáneamente: 
+ - Una para el Backend (API) 
+ - Otra para el Frontend (Dashboard).
 
-Clonar/Descargar: Asegúrate de que todos los archivos del proyecto estén en la carpeta Proyecto_seminario.
+## 1. Configuración Inicial (Solo la primera vez)
 
-Abrir Terminal: Abre una terminal en la carpeta raíz del proyecto.
+1.1 Clonar/Descargar: Asegúrate de que todos los archivos del proyecto estén en la carpeta desde el terminal ejecutar git clone + url_git
 
-Crear Entorno Virtual:
+1.2 Abre una terminal en la carpeta raíz del proyecto.
 
-python -m venv venv
+1.3 Crear Entorno Virtual:
+    python -m venv venv
 
+1.4 Activar Entorno Virtual (Windows):
+    .\venv\Scripts\Activate
 
-Activar Entorno Virtual (Windows):
-
-.\venv\Scripts\Activate
-
-
-Instalar Dependencias:
-
-pip install -r requirements.txt
+1.5 Instalar Dependencias:
+    pip install -r requirements.txt
 
 
-2. Ejecución (Cada vez que inicies)
+## 2. Ejecución (Cada vez que inicies)
 
+Iniciar el Backend (API):
 Terminal 1: Iniciar el Backend (API)
-
-Abre una terminal en la raíz del proyecto.
-
-Activa el entorno: .\venv\Scripts\Activate
-
-Inicia el servidor Uvicorn:
-
-uvicorn api_service:app --reload
-
+    Abre una terminal en la raíz del proyecto.
+    Activa el entorno: .\venv\Scripts\Activate
+    Inicia el servidor Uvicorn:
+        uvicorn api_service:app --reload
 
 Espera a ver el mensaje: Uvicorn running on http://127.0.0.1:8000
 
-Deja esta terminal abierta.
-
 Terminal 2: Iniciar el Frontend (Dashboard)
+    Activa el entorno: .\venv\Scripts\Activate
+    Inicia el servidor de Streamlit:
+    streamlit run app.py
 
-Abre una NUEVA terminal en la raíz del proyecto.
-
-Activa el entorno: .\venv\Scripts\Activate
-
-Inicia el servidor de Streamlit:
-
-streamlit run app.py
+### Método 2
+Crear un archivo llamado run_app.py el mismo que contendra los comandos para ejecutar tanto elbackend como el forntend
+python run_app.py

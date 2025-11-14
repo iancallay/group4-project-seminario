@@ -59,31 +59,20 @@ if __name__ == "__main__":
     # Cargar los datos
     print("Cargando datos {DATA_PATH} ...")
     df_superstore = cargar_datos_excel(DATA_PATH)
-
-    # Verificar valores nulos
-    resumen_nulos = verificar_nulos(df_superstore)
-    print(resumen_nulos)
     
     # Renombrar columnas
     print("Renombrando columnas para evitar espacios ...")
     df_superstore_renamed = renombrar_columnas(df_superstore, columnas_actuales)
     # print(df_superstore.columns)
     
-    # Convertir a mayúsculas el texto de todas las columnas de tipo texto
-    df_superstore_upper = convertir_a_mayusculas(df_superstore_renamed)
-    
     # Ordenar y formatear la columna de fecha 'Order_Date'
-    df_superstore_order_date = ordenar_y_formatear_fecha(df_superstore_upper, 'Order_Date')
+    df_superstore_order_date = ordenar_y_formatear_fecha(df_superstore_renamed, 'Order_Date')
     
     df_agregar_columnas = agregar_columnas_fecha(df_superstore_order_date, columna_fecha="Order_Date")
 
     
     df_final = preparar_datos_para_analisis(df_agregar_columnas)
     print(df_final.columns)
-    
-    
-    df_grouped = agrupar_ventas(df_final, nivel="mensual", por=["Region", "Category"])
-    print(df_grouped.head(5))
     
     # Guardar los datos limpios
     guardar_datos_limpios(df_final, OUTPUT_PATH)

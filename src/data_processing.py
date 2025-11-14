@@ -4,13 +4,17 @@ import pandas as pd
 # --- Rutas ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.abspath(os.path.join(BASE_DIR, '..'))
-FILE_PATH = os.path.join(PROJECT_ROOT, 'data', 'US Superstore data.xls')
+# FILE_PATH = os.path.join(PROJECT_ROOT, 'data', 'US Superstore data.xls')
+FILE_PATH = os.path.join(PROJECT_ROOT, 'data',
+                         'processed', 'superstore_clean.csv')
 
 
 def load_data():
     """Carga y preprocesa el dataset."""
     try:
-        df = pd.read_excel(FILE_PATH)
+        # df = pd.read_excel(FILE_PATH)
+        df = pd.read_csv(FILE_PATH)
+        df = df.copy()
         # Normaliza nombres de columnas (espacios y guiones)
         df.columns = df.columns.str.replace(' ', '_').str.replace('-', '_')
         # Normaliza fechas

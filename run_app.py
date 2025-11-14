@@ -9,6 +9,9 @@ PORT = 8000
 # --- Asegurar variable PYTHONPATH ---
 os.environ["PYTHONPATH"] = os.getcwd()
 
+data_clean = f"python main.py"
+subprocess.call(data_clean, shell=True)
+
 # --- Comando para FastAPI ---
 api_cmd = f"uvicorn api_service:app --reload --host {HOST} --port {PORT}"
 
