@@ -93,7 +93,7 @@ Terminal 1: Iniciar el Backend (API)\
     Inicia el servidor Uvicorn:\ 
         uvicorn api_service:app --reload\
 
-![fastapi][./imagen/fastapi.png]
+![fastapi](./imagen/fastapi.png)
 
 Espera a ver el mensaje: Uvicorn running on http://127.0.0.1:8000\
 
