@@ -103,6 +103,15 @@ Terminal 2: Iniciar el Frontend (Dashboard)\
     Inicia el servidor de Streamlit:\
     streamlit run app.py\
 
+Página principal de Streamlit
+![streamlit_main](./imagen/sreamlit.png)
+Modelo Sarima
+![streamlit_main](./imagen/sarima.png)
+Modelo XGBoost
+![streamlit_main](./imagen/xgboost.png)
+KPI's Comparativos
+![streamlit_main](./imagen/kpis.png)
+
 # Método 2
 Crear un archivo llamado run_app.py el mismo que contendra los comandos para ejecutar tanto el backend como el forntend\
 python run_app.py
