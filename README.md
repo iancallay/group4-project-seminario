@@ -1,7 +1,10 @@
 > [!NOTE]
 > # group4-project-seminario
 >
-[![Visitar Aplicación](https://img.shields.io/badge/Visitar%20Aplicaci%C3%B3n-Google%20Cloud-blue?style=for-the-badge)](https://tu-aplicacion-en-google-cloud.run.app)
+[![Visitar Streamlit](https://retail-streamlit-388244465152.us-central1.run.app/)\
+
+[![Visitar FastApi](https://retail-fastapi-388244465152.us-central1.run.app/docs)\
+
 ## Integrantes
 
 - Ivan Ancallay
