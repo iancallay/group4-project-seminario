@@ -86,24 +86,25 @@ Soporte de Archivos: openpyxl, xlrd
 
 # Método 1
 
-Iniciar el Backend (API):
-Terminal 1: Iniciar el Backend (API)
-    Abre una terminal en la raíz del proyecto.
-    Activa el entorno: .\venv\Scripts\Activate
-    Inicia el servidor Uvicorn:
-        uvicorn api_service:app --reload
+Iniciar el Backend (API):\
+Terminal 1: Iniciar el Backend (API)\
+    Abre una terminal en la raíz del proyecto.\
+    Activa el entorno: .\venv\Scripts\Activate  
+    Inicia el servidor Uvicorn:\ 
+        uvicorn api_service:app --reload\
 
-Espera a ver el mensaje: Uvicorn running on http://127.0.0.1:8000
+Espera a ver el mensaje: Uvicorn running on http://127.0.0.1:8000\
 
-Iniciar el Dashboard
-Terminal 2: Iniciar el Frontend (Dashboard)
-    Activa el entorno: .\venv\Scripts\Activate
-    Inicia el servidor de Streamlit:
-    streamlit run app.py
+Iniciar el Dashboard\
+Terminal 2: Iniciar el Frontend (Dashboard)\
+    Activa el entorno: .\venv\Scripts\Activate  
+    Inicia el servidor de Streamlit:\
+    streamlit run app.py\
 
 # Método 2
-Crear un archivo llamado run_app.py el mismo que contendra los comandos para ejecutar tanto elbackend como el forntend
+Crear un archivo llamado run_app.py el mismo que contendra los comandos para ejecutar tanto elbackend como el forntend\
 python run_app.py
 
 > [!IMPORTANT]
-> <button><a href:"_target_blank">Link</a></button>
+> Link to:
+<button><a href:"_target_blank">Link</a></button>
